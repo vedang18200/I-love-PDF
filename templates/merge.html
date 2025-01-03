@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-semibold mb-4">Merge PDFs</h2>
+    <form action="{% url 'merge' %}" method="post" enctype="multipart/form-data" class="space-y-4">
+        {% csrf_token %}
+        <label class="block">
+            <span class="text-gray-700">Select PDFs:</span>
+            <input type="file" name="files" multiple required class="mt-1 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+        </label>
+        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded font-semibold">
+            Merge PDFs
+        </button>
+    </form>
+</div>
+{% endblock %}

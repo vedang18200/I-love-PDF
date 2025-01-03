@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-lg mx-auto bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-semibold mb-4">{{ operation }} Completed!</h2>
+    <p class="mb-4">Your PDF has been processed successfully.</p>
+    <a href="{{ file_url }}" class="block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded text-center">
+        Download Processed PDF
+    </a>
+    <a href="/" class="block bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded text-center mt-4">
+        Go Back to Home
+    </a>
+</div>
+{% endblock %}

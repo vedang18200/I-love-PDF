@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-semibold mb-4">Welcome to PDF Toolkit</h2>
+    <p class="mb-4">Your one-stop solution for managing PDFs. Choose from the following features:</p>
+    <div class="grid gap-4">
+        <a href="{% url 'merge' %}" class="block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded text-center">Merge PDFs</a>
+        <a href="{% url 'split' %}" class="block bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded text-center">Split PDFs</a>
+        <a href="{% url 'compress' %}" class="block bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded text-center">Compress PDFs</a>
+        <a href="{% url 'convert' %}" class="block bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded text-center">Convert to PDF</a>
+    </div>
+</div>
+{% endblock %}
